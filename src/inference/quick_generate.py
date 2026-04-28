@@ -53,6 +53,48 @@ def infer_animation_from_stem(stem: str) -> str:
     return "idle"
 
 
+try:
+    _RESAMPLE_NEAREST = Image.Resampling.NEAREST
+except AttributeError:
+    _RESAMPLE_NEAREST = Image.NEAREST
+
+
+def _compose_postprocess_tensor(
+    composed: Tensor,
+    palette: Tensor | None,
+    *,
+    alpha_hard: bool,
+) -> Tensor:
+    """
+    Subito dopo ``compose_residual_rgba``: alpha binaria {0,1} (soglia fissa 0.5) e RGB al
+    colore più vicino nella palette ufficiale (L2, ``palette_utils``).
+
+    ``composed``: [B,4,H,W] float in [0,1].
+    """
+    rgb = composed[:, :3].clamp(0.0, 1.0)
+    a = composed[:, 3:4].clamp(0.0, 1.0)
+    if alpha_hard:
+        a_out = (a >= 0.5).to(rgb.dtype)
+    else:
+        a_out = a
+
+    if palette is not None and rgb_to_indices is not None and indices_to_rgb is not None:
+        pal = palette.to(composed.device, dtype=rgb.dtype)
+        outs = []
+        for b in range(rgb.shape[0]):
+            idx = rgb_to_indices(rgb[b], pal)
+            outs.append(indices_to_rgb(idx, pal).unsqueeze(0))
+        rgb_out = torch.cat(outs, dim=0)
+    else:
+        rgb_out = rgb
+
+    # Con alpha binaria: azzera il RGB dove alpha=0 (niente colore palette sotto trasparenza)
+    if alpha_hard:
+        rgb_out = rgb_out * a_out
+
+    return torch.cat([rgb_out, a_out], dim=1)
+
+
 def pick_random_source_entry(
     licensed_root: str = "data/raw/licensed",
 ) -> tuple[str | None, str | None]:
@@ -110,7 +152,8 @@ class AnimationDevGenerator:
         self.model.eval()
 
         print(f"[OK] Modello caricato: {checkpoint_path}")
-        print(f"  Device: {self.device}\n")
+        print(f"  Device: {self.device}")
+        print("  Post-compose tensor: alpha binaria opzionale + snap palette da JSON; resize NEAREST.\n")
 
     def generate_sheet(
         self,
@@ -126,8 +169,6 @@ class AnimationDevGenerator:
         palette_levels: int = 3,
         palette_json: str | None = None,
         alpha_hard: bool = True,
-        alpha_threshold: float = 0.5,
-        alpha_hard_mode: str = "relative",
     ) -> list[Image.Image]:
         """
         Genera un'animazione completa.
@@ -162,10 +203,8 @@ class AnimationDevGenerator:
                 f"  Palette cap: ON (RGB L={pl} livelli/canale -> griglia fino a {grid_n} colori)"
             )
         if alpha_hard:
-            am = (alpha_hard_mode or "relative").lower()
             print(
-                f"  Alpha hard: ON (mode={am}, thr={alpha_threshold:.2f} -> 0 o 255; "
-                f"relative = frazione del max alpha nel frame, evita sheet vuota se picco < 127)"
+                "  Alpha hard (post-compose, tensor): ON soglia fissa 0.5 -> {0,1}"
             )
         else:
             print("  Alpha hard: OFF (alpha continua dalla sigmoid)")
@@ -215,33 +254,28 @@ class AnimationDevGenerator:
             else:
                 ref_in = ref_rgb
 
+            pal_for_tensor = palette_tensor if use_nearest_pal else None
             frame_256 = self._generate_single_frame(
                 animation,
                 i,
                 frame_count,
                 ref_rgb=ref_in,
                 pose_hw=pose_hw,
+                palette_tensor=pal_for_tensor,
+                alpha_hard=alpha_hard,
             )
 
-            if enhance_output:
+            # L'enhance altera il RGB fuori palette: con palette JSON restiamo pixel-perfect
+            if enhance_output and not use_nearest_pal:
                 frame_256 = self._post_enhance_rgba(frame_256)
-            if use_nearest_pal and palette_tensor is not None:
-                frame_256 = self._apply_palette_nearest_rgba(frame_256, palette_tensor)
-            elif palette_cap:
+            # Snap palette gia' fatto in tensor se pal_for_tensor; altrimenti griglia L^3
+            if not use_nearest_pal and palette_cap:
                 frame_256 = self._apply_palette_cap_rgba(frame_256, levels=pl)
-            if alpha_hard:
-                frame_256 = self._apply_alpha_hard_rgba(
-                    frame_256,
-                    threshold=alpha_threshold,
-                    mode=alpha_hard_mode,
-                )
+            # Alpha binaria gia' applicata in tensor se alpha_hard
 
             prev_ref_rgb = self._chain_ref_rgb_from_rgba(frame_256)
 
-            if output_size < 256:
-                frame = self._downscale(frame_256, output_size)
-            else:
-                frame = frame_256
+            frame = self._resize_canvas_nearest(frame_256, output_size)
 
             frames.append(frame)
 
@@ -378,8 +412,10 @@ class AnimationDevGenerator:
         total_frames: int,
         ref_rgb: np.ndarray | None = None,
         pose_hw: np.ndarray | None = None,
+        palette_tensor: Tensor | None = None,
+        alpha_hard: bool = True,
     ) -> Image.Image:
-        """Un frame: concat ref RGB + pose L + cond → RGBA."""
+        """Un frame: concat ref RGB + pose L + cond → RGBA; post su tensore dopo compose."""
         if ref_rgb is None:
             ref_img = np.ones((256, 256, 3), dtype=np.uint8) * 128
         else:
@@ -418,6 +454,11 @@ class AnimationDevGenerator:
         with torch.no_grad():
             raw = self.model(input_tensor)
             composed = compose_residual_rgba(ref_t, raw)
+            composed = _compose_postprocess_tensor(
+                composed,
+                palette_tensor,
+                alpha_hard=alpha_hard,
+            )
 
         output_np = composed[0].cpu().numpy().transpose(1, 2, 0)
         output_np = np.clip(output_np * 255.0, 0.0, 255.0).astype(np.uint8)
@@ -456,18 +497,14 @@ class AnimationDevGenerator:
             print(f"[OK] Ref mostro caricato: {source_image}\n")
         return rgb, pose
 
-    def _downscale(self, img: Image.Image, target_size: int) -> Image.Image:
+    def _resize_canvas_nearest(self, img: Image.Image, target_size: int) -> Image.Image:
         """
-        Downscala preservando la struttura pixel art.
-        Usa NEAREST per mantenere bordi netti.
+        Scala la tela a ``target_size`` x ``target_size`` con NEAREST (mai bilinear).
+        Vale per downscale 256->128 e per eventuale upscale nativo->256.
         """
-        if img.width <= target_size:
+        if img.width == target_size and img.height == target_size:
             return img
-
-        # Downscala con NEAREST
-        downscaled = img.resize((target_size, target_size), Image.NEAREST)
-
-        return downscaled
+        return img.resize((target_size, target_size), _RESAMPLE_NEAREST)
 
     def export_sheet(
         self,
@@ -482,8 +519,6 @@ class AnimationDevGenerator:
         palette_levels: int = 3,
         palette_json: str | None = None,
         alpha_hard: bool = True,
-        alpha_threshold: float = 0.5,
-        alpha_hard_mode: str = "relative",
     ):
         """
         Esporta i frame come spritesheet.
@@ -520,8 +555,7 @@ class AnimationDevGenerator:
             "palette_grid_max_colors": pl**3,
             "palette_json": palette_json,
             "alpha_hard": alpha_hard,
-            "alpha_threshold": alpha_threshold,
-            "alpha_hard_mode": alpha_hard_mode,
+            "alpha_hard_threshold": 0.5,
         }
 
         meta_path = output_path.replace(".png", ".json")
@@ -545,8 +579,6 @@ def main(
     palette_levels: int = 3,
     palette_json: str | None = None,
     alpha_hard: bool = True,
-    alpha_threshold: float = 0.5,
-    alpha_hard_mode: str = "relative",
     random_source: bool = False,
 ):
     """Entry point inferenza."""
@@ -608,8 +640,6 @@ def main(
             palette_levels=palette_levels,
             palette_json=palette_json,
             alpha_hard=alpha_hard,
-            alpha_threshold=alpha_threshold,
-            alpha_hard_mode=alpha_hard_mode,
         )
         generator.export_sheet(
             frames,
@@ -623,8 +653,6 @@ def main(
             palette_levels=palette_levels,
             palette_json=palette_json,
             alpha_hard=alpha_hard,
-            alpha_threshold=alpha_threshold,
-            alpha_hard_mode=alpha_hard_mode,
         )
 
 

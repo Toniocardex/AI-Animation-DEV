@@ -210,8 +210,6 @@ def cmd_generate(args):
         palette_levels=getattr(args, "palette_levels", 4),
         palette_json=palette_json,
         alpha_hard=not getattr(args, "soft_alpha", False),
-        alpha_threshold=getattr(args, "alpha_threshold", 0.5),
-        alpha_hard_mode=getattr(args, "alpha_hard_mode", "relative"),
         random_source=use_random,
     )
 
