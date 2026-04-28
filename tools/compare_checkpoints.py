@@ -164,6 +164,10 @@ def render_cell(
             enhance_output=enhance,
             palette_cap=palette_cap,
             palette_levels=3,
+            palette_json=None,
+            alpha_hard=False,
+            alpha_threshold=0.5,
+            alpha_hard_mode="relative",
         )
     if not frames:
         return Image.new("RGBA", (cell_size, cell_size), (40, 40, 40, 255))

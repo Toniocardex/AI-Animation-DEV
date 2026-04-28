@@ -190,6 +190,13 @@ def cmd_generate(args):
                 "[WARN] --poses-from-input richiede --input. "
                 "Genero senza motion-from.\n"
             )
+    if getattr(args, "no_palette_json", False):
+        palette_json = None
+    else:
+        palette_json = getattr(args, "palette_json", None)
+        if palette_json is None and Path("configs/palette.json").is_file():
+            palette_json = "configs/palette.json"
+
     generate_main(
         checkpoint=args.checkpoint,
         source_image=args.input,
@@ -201,6 +208,10 @@ def cmd_generate(args):
         enhance_output=not getattr(args, "no_enhance", False),
         palette_cap=not getattr(args, "no_palette_cap", False),
         palette_levels=getattr(args, "palette_levels", 4),
+        palette_json=palette_json,
+        alpha_hard=not getattr(args, "soft_alpha", False),
+        alpha_threshold=getattr(args, "alpha_threshold", 0.5),
+        alpha_hard_mode=getattr(args, "alpha_hard_mode", "relative"),
         random_source=use_random,
     )
 
@@ -410,6 +421,37 @@ Flusso di lavoro consigliato:
         metavar="L",
         help="Livelli per canale RGB dopo generazione (L^3 colori max in griglia). "
         "3=27, 4=64 (default), 5=125. Ignorato con --no-palette-cap.",
+    )
+    generate_parser.add_argument(
+        "--palette-json",
+        default=None,
+        metavar="JSON",
+        help="Snap RGB al colore piu' vicino in questo palette.json (es. configs/palette.json). "
+        "Se omesso e il file esiste, viene usato automaticamente.",
+    )
+    generate_parser.add_argument(
+        "--no-palette-json",
+        action="store_true",
+        help="Non usare configs/palette.json neanche se presente (solo griglia L^3 o niente).",
+    )
+    generate_parser.add_argument(
+        "--soft-alpha",
+        action="store_true",
+        help="Mantieni alpha continua (disattiva binarizzazione anti-smearing).",
+    )
+    generate_parser.add_argument(
+        "--alpha-threshold",
+        type=float,
+        default=0.5,
+        help="Alpha hard: con mode=relative e' frazione del max alpha nel frame (0.5=meta'); "
+        "con mode=absolute e' soglia su 0-255 scalata. Ignorato con --soft-alpha.",
+    )
+    generate_parser.add_argument(
+        "--alpha-hard-mode",
+        choices=["relative", "absolute"],
+        default="relative",
+        help="relative: taglio rispetto al picco alpha (evita output tutto trasparente). "
+        "absolute: soglia fissa come prima.",
     )
 
     vqvae_parser = subparsers.add_parser(

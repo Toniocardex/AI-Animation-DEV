@@ -2,12 +2,15 @@
 src/inference/quick_generate.py
 Generatore sprite con supporto multi-risoluzione
 """
+from __future__ import annotations
+
 import json
 import random
 from pathlib import Path
 
 import numpy as np
 import torch
+from torch import Tensor
 from PIL import Image, ImageEnhance, ImageFilter
 
 from src.model.simple_model import (
@@ -21,6 +24,17 @@ try:
     from src.preprocessing.quick_processor import QuickSpriteProcessor
 except ModuleNotFoundError:
     from src_preprocessing_quick_processor import QuickSpriteProcessor
+
+try:
+    from src.data.palette_utils import (
+        indices_to_rgb,
+        load_palette_tensor,
+        rgb_to_indices,
+    )
+except ModuleNotFoundError:
+    load_palette_tensor = None  # type: ignore[misc, assignment]
+    rgb_to_indices = None  # type: ignore[misc, assignment]
+    indices_to_rgb = None  # type: ignore[misc, assignment]
 
 
 def infer_animation_from_stem(stem: str) -> str:
@@ -110,6 +124,10 @@ class AnimationDevGenerator:
         enhance_output: bool = True,
         palette_cap: bool = True,
         palette_levels: int = 3,
+        palette_json: str | None = None,
+        alpha_hard: bool = True,
+        alpha_threshold: float = 0.5,
+        alpha_hard_mode: str = "relative",
     ) -> list[Image.Image]:
         """
         Genera un'animazione completa.
@@ -130,12 +148,37 @@ class AnimationDevGenerator:
         if enhance_output:
             print("  Post-enhance: ON (nitidezza + contrasto leggeri sul RGB)")
         pl = int(max(2, min(palette_levels, 32)))
-        if palette_cap:
+        pal_path = Path(palette_json) if palette_json else None
+        use_nearest_pal = (
+            pal_path is not None
+            and pal_path.is_file()
+            and load_palette_tensor is not None
+        )
+        if use_nearest_pal:
+            print(f"  Palette nearest: {pal_path} (snap RGB a K colori del JSON)")
+        elif palette_cap:
             grid_n = pl**3
             print(
                 f"  Palette cap: ON (RGB L={pl} livelli/canale -> griglia fino a {grid_n} colori)"
             )
+        if alpha_hard:
+            am = (alpha_hard_mode or "relative").lower()
+            print(
+                f"  Alpha hard: ON (mode={am}, thr={alpha_threshold:.2f} -> 0 o 255; "
+                f"relative = frazione del max alpha nel frame, evita sheet vuota se picco < 127)"
+            )
+        else:
+            print("  Alpha hard: OFF (alpha continua dalla sigmoid)")
         print()
+
+        palette_tensor = None
+        if use_nearest_pal:
+            try:
+                palette_tensor = load_palette_tensor(pal_path)
+                print(f"  [OK] Caricati {palette_tensor.shape[0]} colori palette\n")
+            except (OSError, json.JSONDecodeError, KeyError, RuntimeError) as e:
+                print(f"  [WARN] Palette JSON non valida ({e}): uso fallback griglia se attiva.\n")
+                use_nearest_pal = False
         motion_poses = None
         if motion_from:
             motion_poses = self._poses_from_motion_strip(motion_from, frame_count)
@@ -182,8 +225,16 @@ class AnimationDevGenerator:
 
             if enhance_output:
                 frame_256 = self._post_enhance_rgba(frame_256)
-            if palette_cap:
+            if use_nearest_pal and palette_tensor is not None:
+                frame_256 = self._apply_palette_nearest_rgba(frame_256, palette_tensor)
+            elif palette_cap:
                 frame_256 = self._apply_palette_cap_rgba(frame_256, levels=pl)
+            if alpha_hard:
+                frame_256 = self._apply_alpha_hard_rgba(
+                    frame_256,
+                    threshold=alpha_threshold,
+                    mode=alpha_hard_mode,
+                )
 
             prev_ref_rgb = self._chain_ref_rgb_from_rgba(frame_256)
 
@@ -232,6 +283,60 @@ class AnimationDevGenerator:
         out_rgb = (q * 255.0).astype(np.uint8)
         out = np.dstack([out_rgb, arr[:, :, 3]])
         return Image.fromarray(out, mode="RGBA")
+
+    @staticmethod
+    def _apply_palette_nearest_rgba(img: Image.Image, palette: Tensor) -> Image.Image:
+        """Snap RGB al colore piu' vicino (L2) in palette [K,3] in [0,1]."""
+        if rgb_to_indices is None or indices_to_rgb is None:
+            return img
+
+        arr = np.asarray(img.convert("RGBA"), dtype=np.float32) / 255.0
+        if arr.ndim != 3 or arr.shape[2] != 4:
+            return img
+        h, w = arr.shape[0], arr.shape[1]
+        rgb = torch.from_numpy(arr[:, :, :3]).permute(2, 0, 1).contiguous().float()
+        pal = palette.float().cpu()
+        idx = rgb_to_indices(rgb, pal)
+        rgb_q = indices_to_rgb(idx, pal)
+        out_rgb = (
+            (rgb_q.permute(1, 2, 0).clamp(0.0, 1.0).numpy() * 255.0)
+            .round()
+            .astype(np.uint8)
+        )
+        a = (np.clip(arr[:, :, 3], 0.0, 1.0) * 255.0).round().astype(np.uint8)
+        out = np.dstack([out_rgb, a])
+        return Image.fromarray(out, mode="RGBA")
+
+    @staticmethod
+    def _apply_alpha_hard_rgba(
+        img: Image.Image,
+        threshold: float = 0.5,
+        mode: str = "relative",
+    ) -> Image.Image:
+        """
+        Binarizza alpha: pixel sopra cutoff -> 255, sotto -> 0.
+
+        - ``relative`` (default): cutoff = max(1, int(mx * thr)) con mx = max alpha nel frame.
+          Cosi' se la rete ha picco alpha basso (es. 80/255) non si azzera tutto come con 127 fisso.
+        - ``absolute``: cutoff = thr * 255 (soglia globale 0..1 sul range 8 bit).
+        """
+        arr = np.asarray(img.convert("RGBA"), dtype=np.uint8)
+        if arr.ndim != 3 or arr.shape[2] != 4:
+            return img
+        a = arr[:, :, 3].astype(np.float32)
+        mx = float(np.max(a))
+        thr = float(np.clip(threshold, 0.01, 0.99))
+        m = (mode or "relative").lower()
+        if m == "absolute":
+            cut = thr * 255.0
+        else:
+            # relative: frazione del picco (es. 0.5 => tieni la meta' superiore del range alpha)
+            if mx < 1e-3:
+                return Image.fromarray(arr, mode="RGBA")
+            cut = max(1.0, min(254.0, mx * thr))
+        arr = arr.copy()
+        arr[:, :, 3] = np.where(a >= cut, 255, 0).astype(np.uint8)
+        return Image.fromarray(arr, mode="RGBA")
 
     def _post_enhance_rgba(self, img: Image.Image) -> Image.Image:
         """Migliora percezione nitidezza senza cambiare architettura (solo inferenza)."""
@@ -375,6 +480,10 @@ class AnimationDevGenerator:
         enhance_output: bool = True,
         palette_cap: bool = True,
         palette_levels: int = 3,
+        palette_json: str | None = None,
+        alpha_hard: bool = True,
+        alpha_threshold: float = 0.5,
+        alpha_hard_mode: str = "relative",
     ):
         """
         Esporta i frame come spritesheet.
@@ -409,6 +518,10 @@ class AnimationDevGenerator:
             "palette_cap": palette_cap,
             "palette_levels": pl,
             "palette_grid_max_colors": pl**3,
+            "palette_json": palette_json,
+            "alpha_hard": alpha_hard,
+            "alpha_threshold": alpha_threshold,
+            "alpha_hard_mode": alpha_hard_mode,
         }
 
         meta_path = output_path.replace(".png", ".json")
@@ -430,6 +543,10 @@ def main(
     enhance_output: bool = True,
     palette_cap: bool = True,
     palette_levels: int = 3,
+    palette_json: str | None = None,
+    alpha_hard: bool = True,
+    alpha_threshold: float = 0.5,
+    alpha_hard_mode: str = "relative",
     random_source: bool = False,
 ):
     """Entry point inferenza."""
@@ -489,6 +606,10 @@ def main(
             enhance_output=enhance_output,
             palette_cap=palette_cap,
             palette_levels=palette_levels,
+            palette_json=palette_json,
+            alpha_hard=alpha_hard,
+            alpha_threshold=alpha_threshold,
+            alpha_hard_mode=alpha_hard_mode,
         )
         generator.export_sheet(
             frames,
@@ -500,6 +621,10 @@ def main(
             enhance_output=enhance_output,
             palette_cap=palette_cap,
             palette_levels=palette_levels,
+            palette_json=palette_json,
+            alpha_hard=alpha_hard,
+            alpha_threshold=alpha_threshold,
+            alpha_hard_mode=alpha_hard_mode,
         )
 
 
