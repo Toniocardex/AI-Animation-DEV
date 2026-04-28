@@ -1,0 +1,2142 @@
+[
+  {
+    "id": "000000",
+    "sprite": "sprites/000000.png",
+    "pose": "poses/000000.png",
+    "clip_id": "59d0a160326be07c",
+    "animation": "attack",
+    "frame_idx": 5,
+    "total_frames": 6,
+    "augmented": true
+  },
+  {
+    "id": "000001",
+    "sprite": "sprites/000001.png",
+    "pose": "poses/000001.png",
+    "clip_id": "7e30d0a8b65acfb3",
+    "animation": "idle",
+    "frame_idx": 3,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000002",
+    "sprite": "sprites/000002.png",
+    "pose": "poses/000002.png",
+    "clip_id": "75b5c1c267e4986a",
+    "animation": "idle",
+    "frame_idx": 2,
+    "total_frames": 6,
+    "augmented": true
+  },
+  {
+    "id": "000003",
+    "sprite": "sprites/000003.png",
+    "pose": "poses/000003.png",
+    "clip_id": "82039799f657a313",
+    "animation": "idle",
+    "frame_idx": 0,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000004",
+    "sprite": "sprites/000004.png",
+    "pose": "poses/000004.png",
+    "clip_id": "5370933a92206720",
+    "animation": "walk",
+    "frame_idx": 0,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000005",
+    "sprite": "sprites/000005.png",
+    "pose": "poses/000005.png",
+    "clip_id": "be42930e87af3d36",
+    "animation": "attack",
+    "frame_idx": 49,
+    "total_frames": 50,
+    "augmented": true
+  },
+  {
+    "id": "000006",
+    "sprite": "sprites/000006.png",
+    "pose": "poses/000006.png",
+    "clip_id": "c250be6dda38ceac",
+    "animation": "idle",
+    "frame_idx": 4,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000007",
+    "sprite": "sprites/000007.png",
+    "pose": "poses/000007.png",
+    "clip_id": "e3d0abe10d1ece15",
+    "animation": "idle",
+    "frame_idx": 8,
+    "total_frames": 18,
+    "augmented": true
+  },
+  {
+    "id": "000008",
+    "sprite": "sprites/000008.png",
+    "pose": "poses/000008.png",
+    "clip_id": "7b0aad87c6c309b1",
+    "animation": "attack",
+    "frame_idx": 6,
+    "total_frames": 16,
+    "augmented": false
+  },
+  {
+    "id": "000009",
+    "sprite": "sprites/000009.png",
+    "pose": "poses/000009.png",
+    "clip_id": "6720eea796c0709f",
+    "animation": "attack",
+    "frame_idx": 5,
+    "total_frames": 6,
+    "augmented": true
+  },
+  {
+    "id": "000010",
+    "sprite": "sprites/000010.png",
+    "pose": "poses/000010.png",
+    "clip_id": "f782a578c3a2c9c1",
+    "animation": "idle",
+    "frame_idx": 2,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000011",
+    "sprite": "sprites/000011.png",
+    "pose": "poses/000011.png",
+    "clip_id": "b58ca8f8b598d513",
+    "animation": "death",
+    "frame_idx": 2,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000012",
+    "sprite": "sprites/000012.png",
+    "pose": "poses/000012.png",
+    "clip_id": "f1d7eff4cc4e8311",
+    "animation": "idle",
+    "frame_idx": 1,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000013",
+    "sprite": "sprites/000013.png",
+    "pose": "poses/000013.png",
+    "clip_id": "8a368d17d9a368b7",
+    "animation": "attack",
+    "frame_idx": 3,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000014",
+    "sprite": "sprites/000014.png",
+    "pose": "poses/000014.png",
+    "clip_id": "50b36854936af655",
+    "animation": "attack",
+    "frame_idx": 4,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000015",
+    "sprite": "sprites/000015.png",
+    "pose": "poses/000015.png",
+    "clip_id": "3af7251ed116e6d0",
+    "animation": "death",
+    "frame_idx": 9,
+    "total_frames": 10,
+    "augmented": true
+  },
+  {
+    "id": "000016",
+    "sprite": "sprites/000016.png",
+    "pose": "poses/000016.png",
+    "clip_id": "30c480df5b607fb6",
+    "animation": "attack",
+    "frame_idx": 2,
+    "total_frames": 50,
+    "augmented": false
+  },
+  {
+    "id": "000017",
+    "sprite": "sprites/000017.png",
+    "pose": "poses/000017.png",
+    "clip_id": "0ed569f701fb830e",
+    "animation": "run",
+    "frame_idx": 4,
+    "total_frames": 12,
+    "augmented": false
+  },
+  {
+    "id": "000018",
+    "sprite": "sprites/000018.png",
+    "pose": "poses/000018.png",
+    "clip_id": "15e9f41c8f246935",
+    "animation": "death",
+    "frame_idx": 3,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000019",
+    "sprite": "sprites/000019.png",
+    "pose": "poses/000019.png",
+    "clip_id": "97a2598c79e91ce8",
+    "animation": "walk",
+    "frame_idx": 6,
+    "total_frames": 7,
+    "augmented": true
+  },
+  {
+    "id": "000020",
+    "sprite": "sprites/000020.png",
+    "pose": "poses/000020.png",
+    "clip_id": "4e659e6a6852d9b6",
+    "animation": "idle",
+    "frame_idx": 0,
+    "total_frames": 1,
+    "augmented": true
+  },
+  {
+    "id": "000021",
+    "sprite": "sprites/000021.png",
+    "pose": "poses/000021.png",
+    "clip_id": "82eb1f05cf430ea4",
+    "animation": "walk",
+    "frame_idx": 1,
+    "total_frames": 8,
+    "augmented": false
+  },
+  {
+    "id": "000022",
+    "sprite": "sprites/000022.png",
+    "pose": "poses/000022.png",
+    "clip_id": "cc1eaba8ad4f962c",
+    "animation": "run",
+    "frame_idx": 2,
+    "total_frames": 6,
+    "augmented": true
+  },
+  {
+    "id": "000023",
+    "sprite": "sprites/000023.png",
+    "pose": "poses/000023.png",
+    "clip_id": "642c2554079c0ec9",
+    "animation": "death",
+    "frame_idx": 16,
+    "total_frames": 22,
+    "augmented": false
+  },
+  {
+    "id": "000024",
+    "sprite": "sprites/000024.png",
+    "pose": "poses/000024.png",
+    "clip_id": "f8086d83cdd67609",
+    "animation": "attack",
+    "frame_idx": 12,
+    "total_frames": 20,
+    "augmented": false
+  },
+  {
+    "id": "000025",
+    "sprite": "sprites/000025.png",
+    "pose": "poses/000025.png",
+    "clip_id": "a955147f28d43b91",
+    "animation": "idle",
+    "frame_idx": 3,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000026",
+    "sprite": "sprites/000026.png",
+    "pose": "poses/000026.png",
+    "clip_id": "0a4908b156bd5cb6",
+    "animation": "jump",
+    "frame_idx": 30,
+    "total_frames": 34,
+    "augmented": false
+  },
+  {
+    "id": "000027",
+    "sprite": "sprites/000027.png",
+    "pose": "poses/000027.png",
+    "clip_id": "eff27651aaee3e94",
+    "animation": "attack",
+    "frame_idx": 14,
+    "total_frames": 16,
+    "augmented": true
+  },
+  {
+    "id": "000028",
+    "sprite": "sprites/000028.png",
+    "pose": "poses/000028.png",
+    "clip_id": "cc5228530126541c",
+    "animation": "jump",
+    "frame_idx": 1,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000029",
+    "sprite": "sprites/000029.png",
+    "pose": "poses/000029.png",
+    "clip_id": "d954a9da94762d9c",
+    "animation": "walk",
+    "frame_idx": 4,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000030",
+    "sprite": "sprites/000030.png",
+    "pose": "poses/000030.png",
+    "clip_id": "0a4908b156bd5cb6",
+    "animation": "jump",
+    "frame_idx": 0,
+    "total_frames": 34,
+    "augmented": false
+  },
+  {
+    "id": "000031",
+    "sprite": "sprites/000031.png",
+    "pose": "poses/000031.png",
+    "clip_id": "642c2554079c0ec9",
+    "animation": "death",
+    "frame_idx": 11,
+    "total_frames": 22,
+    "augmented": false
+  },
+  {
+    "id": "000032",
+    "sprite": "sprites/000032.png",
+    "pose": "poses/000032.png",
+    "clip_id": "e58a2ad12824a850",
+    "animation": "idle",
+    "frame_idx": 6,
+    "total_frames": 8,
+    "augmented": true
+  },
+  {
+    "id": "000033",
+    "sprite": "sprites/000033.png",
+    "pose": "poses/000033.png",
+    "clip_id": "6a01568112590275",
+    "animation": "idle",
+    "frame_idx": 2,
+    "total_frames": 3,
+    "augmented": false
+  },
+  {
+    "id": "000034",
+    "sprite": "sprites/000034.png",
+    "pose": "poses/000034.png",
+    "clip_id": "b6ada0b79d506df3",
+    "animation": "attack",
+    "frame_idx": 1,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000035",
+    "sprite": "sprites/000035.png",
+    "pose": "poses/000035.png",
+    "clip_id": "9cf96fda3bdbbc79",
+    "animation": "idle",
+    "frame_idx": 1,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000036",
+    "sprite": "sprites/000036.png",
+    "pose": "poses/000036.png",
+    "clip_id": "628e9de4c265df67",
+    "animation": "walk",
+    "frame_idx": 0,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000037",
+    "sprite": "sprites/000037.png",
+    "pose": "poses/000037.png",
+    "clip_id": "41b8606f4c8b13d2",
+    "animation": "attack",
+    "frame_idx": 1,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000038",
+    "sprite": "sprites/000038.png",
+    "pose": "poses/000038.png",
+    "clip_id": "75c752ab391cc468",
+    "animation": "idle",
+    "frame_idx": 3,
+    "total_frames": 42,
+    "augmented": false
+  },
+  {
+    "id": "000039",
+    "sprite": "sprites/000039.png",
+    "pose": "poses/000039.png",
+    "clip_id": "424856bd3c41e89e",
+    "animation": "idle",
+    "frame_idx": 3,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000040",
+    "sprite": "sprites/000040.png",
+    "pose": "poses/000040.png",
+    "clip_id": "1a19ccdc4e3d8c36",
+    "animation": "jump",
+    "frame_idx": 17,
+    "total_frames": 34,
+    "augmented": true
+  },
+  {
+    "id": "000041",
+    "sprite": "sprites/000041.png",
+    "pose": "poses/000041.png",
+    "clip_id": "1a19ccdc4e3d8c36",
+    "animation": "jump",
+    "frame_idx": 30,
+    "total_frames": 34,
+    "augmented": true
+  },
+  {
+    "id": "000042",
+    "sprite": "sprites/000042.png",
+    "pose": "poses/000042.png",
+    "clip_id": "f1d7eff4cc4e8311",
+    "animation": "idle",
+    "frame_idx": 0,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000043",
+    "sprite": "sprites/000043.png",
+    "pose": "poses/000043.png",
+    "clip_id": "0a4908b156bd5cb6",
+    "animation": "jump",
+    "frame_idx": 33,
+    "total_frames": 34,
+    "augmented": false
+  },
+  {
+    "id": "000044",
+    "sprite": "sprites/000044.png",
+    "pose": "poses/000044.png",
+    "clip_id": "980626c6454599ce",
+    "animation": "walk",
+    "frame_idx": 3,
+    "total_frames": 6,
+    "augmented": true
+  },
+  {
+    "id": "000045",
+    "sprite": "sprites/000045.png",
+    "pose": "poses/000045.png",
+    "clip_id": "0ed569f701fb830e",
+    "animation": "run",
+    "frame_idx": 0,
+    "total_frames": 12,
+    "augmented": false
+  },
+  {
+    "id": "000046",
+    "sprite": "sprites/000046.png",
+    "pose": "poses/000046.png",
+    "clip_id": "a5e65707f9695cf6",
+    "animation": "death",
+    "frame_idx": 5,
+    "total_frames": 18,
+    "augmented": false
+  },
+  {
+    "id": "000047",
+    "sprite": "sprites/000047.png",
+    "pose": "poses/000047.png",
+    "clip_id": "82c5cb48ab74d489",
+    "animation": "attack",
+    "frame_idx": 1,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000048",
+    "sprite": "sprites/000048.png",
+    "pose": "poses/000048.png",
+    "clip_id": "a0db37d80cae62df",
+    "animation": "idle",
+    "frame_idx": 13,
+    "total_frames": 15,
+    "augmented": true
+  },
+  {
+    "id": "000049",
+    "sprite": "sprites/000049.png",
+    "pose": "poses/000049.png",
+    "clip_id": "4517d225b50235b8",
+    "animation": "walk",
+    "frame_idx": 3,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000050",
+    "sprite": "sprites/000050.png",
+    "pose": "poses/000050.png",
+    "clip_id": "be42930e87af3d36",
+    "animation": "attack",
+    "frame_idx": 28,
+    "total_frames": 50,
+    "augmented": true
+  },
+  {
+    "id": "000051",
+    "sprite": "sprites/000051.png",
+    "pose": "poses/000051.png",
+    "clip_id": "9edddb8544fa21a4",
+    "animation": "idle",
+    "frame_idx": 0,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000052",
+    "sprite": "sprites/000052.png",
+    "pose": "poses/000052.png",
+    "clip_id": "b6ada0b79d506df3",
+    "animation": "attack",
+    "frame_idx": 3,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000053",
+    "sprite": "sprites/000053.png",
+    "pose": "poses/000053.png",
+    "clip_id": "27c397114778169e",
+    "animation": "attack",
+    "frame_idx": 2,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000054",
+    "sprite": "sprites/000054.png",
+    "pose": "poses/000054.png",
+    "clip_id": "768e51b6528f66ff",
+    "animation": "walk",
+    "frame_idx": 0,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000055",
+    "sprite": "sprites/000055.png",
+    "pose": "poses/000055.png",
+    "clip_id": "6720eea796c0709f",
+    "animation": "attack",
+    "frame_idx": 2,
+    "total_frames": 6,
+    "augmented": true
+  },
+  {
+    "id": "000056",
+    "sprite": "sprites/000056.png",
+    "pose": "poses/000056.png",
+    "clip_id": "b9fdeb82511ecd8e",
+    "animation": "idle",
+    "frame_idx": 2,
+    "total_frames": 42,
+    "augmented": true
+  },
+  {
+    "id": "000057",
+    "sprite": "sprites/000057.png",
+    "pose": "poses/000057.png",
+    "clip_id": "89e796d3c4c46d9c",
+    "animation": "walk",
+    "frame_idx": 0,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000058",
+    "sprite": "sprites/000058.png",
+    "pose": "poses/000058.png",
+    "clip_id": "30c480df5b607fb6",
+    "animation": "attack",
+    "frame_idx": 21,
+    "total_frames": 50,
+    "augmented": false
+  },
+  {
+    "id": "000059",
+    "sprite": "sprites/000059.png",
+    "pose": "poses/000059.png",
+    "clip_id": "acc735403bc834b6",
+    "animation": "walk",
+    "frame_idx": 2,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000060",
+    "sprite": "sprites/000060.png",
+    "pose": "poses/000060.png",
+    "clip_id": "bf7e86089694e9da",
+    "animation": "run",
+    "frame_idx": 2,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000061",
+    "sprite": "sprites/000061.png",
+    "pose": "poses/000061.png",
+    "clip_id": "0a4908b156bd5cb6",
+    "animation": "jump",
+    "frame_idx": 11,
+    "total_frames": 34,
+    "augmented": false
+  },
+  {
+    "id": "000062",
+    "sprite": "sprites/000062.png",
+    "pose": "poses/000062.png",
+    "clip_id": "8397b54aad09948b",
+    "animation": "walk",
+    "frame_idx": 1,
+    "total_frames": 6,
+    "augmented": true
+  },
+  {
+    "id": "000063",
+    "sprite": "sprites/000063.png",
+    "pose": "poses/000063.png",
+    "clip_id": "ec3d689da86b5852",
+    "animation": "death",
+    "frame_idx": 4,
+    "total_frames": 6,
+    "augmented": true
+  },
+  {
+    "id": "000064",
+    "sprite": "sprites/000064.png",
+    "pose": "poses/000064.png",
+    "clip_id": "75c752ab391cc468",
+    "animation": "idle",
+    "frame_idx": 13,
+    "total_frames": 42,
+    "augmented": false
+  },
+  {
+    "id": "000065",
+    "sprite": "sprites/000065.png",
+    "pose": "poses/000065.png",
+    "clip_id": "3efed04f403506d8",
+    "animation": "death",
+    "frame_idx": 5,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000066",
+    "sprite": "sprites/000066.png",
+    "pose": "poses/000066.png",
+    "clip_id": "35a356a2cc670e0c",
+    "animation": "idle",
+    "frame_idx": 5,
+    "total_frames": 12,
+    "augmented": false
+  },
+  {
+    "id": "000067",
+    "sprite": "sprites/000067.png",
+    "pose": "poses/000067.png",
+    "clip_id": "b2dd7c4462e4cd41",
+    "animation": "death",
+    "frame_idx": 1,
+    "total_frames": 6,
+    "augmented": true
+  },
+  {
+    "id": "000068",
+    "sprite": "sprites/000068.png",
+    "pose": "poses/000068.png",
+    "clip_id": "5b8696af93d7630e",
+    "animation": "idle",
+    "frame_idx": 0,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000069",
+    "sprite": "sprites/000069.png",
+    "pose": "poses/000069.png",
+    "clip_id": "3af7251ed116e6d0",
+    "animation": "death",
+    "frame_idx": 7,
+    "total_frames": 10,
+    "augmented": true
+  },
+  {
+    "id": "000070",
+    "sprite": "sprites/000070.png",
+    "pose": "poses/000070.png",
+    "clip_id": "2aeba00205490aa6",
+    "animation": "idle",
+    "frame_idx": 2,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000071",
+    "sprite": "sprites/000071.png",
+    "pose": "poses/000071.png",
+    "clip_id": "7e76c89dfeb56e1e",
+    "animation": "idle",
+    "frame_idx": 1,
+    "total_frames": 10,
+    "augmented": true
+  },
+  {
+    "id": "000072",
+    "sprite": "sprites/000072.png",
+    "pose": "poses/000072.png",
+    "clip_id": "a5e65707f9695cf6",
+    "animation": "death",
+    "frame_idx": 0,
+    "total_frames": 18,
+    "augmented": false
+  },
+  {
+    "id": "000073",
+    "sprite": "sprites/000073.png",
+    "pose": "poses/000073.png",
+    "clip_id": "82f9e59c7f317e50",
+    "animation": "death",
+    "frame_idx": 2,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000074",
+    "sprite": "sprites/000074.png",
+    "pose": "poses/000074.png",
+    "clip_id": "a0db37d80cae62df",
+    "animation": "idle",
+    "frame_idx": 10,
+    "total_frames": 15,
+    "augmented": true
+  },
+  {
+    "id": "000075",
+    "sprite": "sprites/000075.png",
+    "pose": "poses/000075.png",
+    "clip_id": "d27b048922a251e8",
+    "animation": "attack",
+    "frame_idx": 2,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000076",
+    "sprite": "sprites/000076.png",
+    "pose": "poses/000076.png",
+    "clip_id": "2e0403d0665a7b7d",
+    "animation": "attack",
+    "frame_idx": 0,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000077",
+    "sprite": "sprites/000077.png",
+    "pose": "poses/000077.png",
+    "clip_id": "21b2402ffbbf6949",
+    "animation": "death",
+    "frame_idx": 1,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000078",
+    "sprite": "sprites/000078.png",
+    "pose": "poses/000078.png",
+    "clip_id": "d5d896c4e333798a",
+    "animation": "attack",
+    "frame_idx": 2,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000079",
+    "sprite": "sprites/000079.png",
+    "pose": "poses/000079.png",
+    "clip_id": "3efed04f403506d8",
+    "animation": "death",
+    "frame_idx": 3,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000080",
+    "sprite": "sprites/000080.png",
+    "pose": "poses/000080.png",
+    "clip_id": "738d46686f185176",
+    "animation": "idle",
+    "frame_idx": 0,
+    "total_frames": 1,
+    "augmented": false
+  },
+  {
+    "id": "000081",
+    "sprite": "sprites/000081.png",
+    "pose": "poses/000081.png",
+    "clip_id": "75c752ab391cc468",
+    "animation": "idle",
+    "frame_idx": 19,
+    "total_frames": 42,
+    "augmented": false
+  },
+  {
+    "id": "000082",
+    "sprite": "sprites/000082.png",
+    "pose": "poses/000082.png",
+    "clip_id": "0a4908b156bd5cb6",
+    "animation": "jump",
+    "frame_idx": 3,
+    "total_frames": 34,
+    "augmented": false
+  },
+  {
+    "id": "000083",
+    "sprite": "sprites/000083.png",
+    "pose": "poses/000083.png",
+    "clip_id": "e284d236456ad440",
+    "animation": "walk",
+    "frame_idx": 4,
+    "total_frames": 6,
+    "augmented": true
+  },
+  {
+    "id": "000084",
+    "sprite": "sprites/000084.png",
+    "pose": "poses/000084.png",
+    "clip_id": "4516e153657c574a",
+    "animation": "death",
+    "frame_idx": 20,
+    "total_frames": 28,
+    "augmented": true
+  },
+  {
+    "id": "000085",
+    "sprite": "sprites/000085.png",
+    "pose": "poses/000085.png",
+    "clip_id": "30c480df5b607fb6",
+    "animation": "attack",
+    "frame_idx": 7,
+    "total_frames": 50,
+    "augmented": false
+  },
+  {
+    "id": "000086",
+    "sprite": "sprites/000086.png",
+    "pose": "poses/000086.png",
+    "clip_id": "70c07167a76c0edc",
+    "animation": "idle",
+    "frame_idx": 0,
+    "total_frames": 1,
+    "augmented": false
+  },
+  {
+    "id": "000087",
+    "sprite": "sprites/000087.png",
+    "pose": "poses/000087.png",
+    "clip_id": "b9fdeb82511ecd8e",
+    "animation": "idle",
+    "frame_idx": 0,
+    "total_frames": 42,
+    "augmented": true
+  },
+  {
+    "id": "000088",
+    "sprite": "sprites/000088.png",
+    "pose": "poses/000088.png",
+    "clip_id": "cf9bc575fc4b6248",
+    "animation": "idle",
+    "frame_idx": 0,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000089",
+    "sprite": "sprites/000089.png",
+    "pose": "poses/000089.png",
+    "clip_id": "bf7e86089694e9da",
+    "animation": "run",
+    "frame_idx": 0,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000090",
+    "sprite": "sprites/000090.png",
+    "pose": "poses/000090.png",
+    "clip_id": "f5046e543e7119d2",
+    "animation": "death",
+    "frame_idx": 2,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000091",
+    "sprite": "sprites/000091.png",
+    "pose": "poses/000091.png",
+    "clip_id": "d3d509dd3eafbb33",
+    "animation": "idle",
+    "frame_idx": 3,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000092",
+    "sprite": "sprites/000092.png",
+    "pose": "poses/000092.png",
+    "clip_id": "89b4577b97042e89",
+    "animation": "attack",
+    "frame_idx": 4,
+    "total_frames": 10,
+    "augmented": true
+  },
+  {
+    "id": "000093",
+    "sprite": "sprites/000093.png",
+    "pose": "poses/000093.png",
+    "clip_id": "4516e153657c574a",
+    "animation": "death",
+    "frame_idx": 1,
+    "total_frames": 28,
+    "augmented": true
+  },
+  {
+    "id": "000094",
+    "sprite": "sprites/000094.png",
+    "pose": "poses/000094.png",
+    "clip_id": "a957241c0503fcfc",
+    "animation": "walk",
+    "frame_idx": 1,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000095",
+    "sprite": "sprites/000095.png",
+    "pose": "poses/000095.png",
+    "clip_id": "1ab69f5bb8dc1ed3",
+    "animation": "idle",
+    "frame_idx": 5,
+    "total_frames": 6,
+    "augmented": true
+  },
+  {
+    "id": "000096",
+    "sprite": "sprites/000096.png",
+    "pose": "poses/000096.png",
+    "clip_id": "3a9f120b7e8c11fc",
+    "animation": "attack",
+    "frame_idx": 3,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000097",
+    "sprite": "sprites/000097.png",
+    "pose": "poses/000097.png",
+    "clip_id": "f97cc1193ad3bb81",
+    "animation": "death",
+    "frame_idx": 10,
+    "total_frames": 18,
+    "augmented": true
+  },
+  {
+    "id": "000098",
+    "sprite": "sprites/000098.png",
+    "pose": "poses/000098.png",
+    "clip_id": "d5d896c4e333798a",
+    "animation": "attack",
+    "frame_idx": 0,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000099",
+    "sprite": "sprites/000099.png",
+    "pose": "poses/000099.png",
+    "clip_id": "41306ea9457b864b",
+    "animation": "idle",
+    "frame_idx": 4,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000100",
+    "sprite": "sprites/000100.png",
+    "pose": "poses/000100.png",
+    "clip_id": "dc29396c08a8afcd",
+    "animation": "attack",
+    "frame_idx": 1,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000101",
+    "sprite": "sprites/000101.png",
+    "pose": "poses/000101.png",
+    "clip_id": "16a17f0075461d26",
+    "animation": "walk",
+    "frame_idx": 2,
+    "total_frames": 6,
+    "augmented": true
+  },
+  {
+    "id": "000102",
+    "sprite": "sprites/000102.png",
+    "pose": "poses/000102.png",
+    "clip_id": "110ac9583548ba57",
+    "animation": "idle",
+    "frame_idx": 0,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000103",
+    "sprite": "sprites/000103.png",
+    "pose": "poses/000103.png",
+    "clip_id": "be42930e87af3d36",
+    "animation": "attack",
+    "frame_idx": 30,
+    "total_frames": 50,
+    "augmented": true
+  },
+  {
+    "id": "000104",
+    "sprite": "sprites/000104.png",
+    "pose": "poses/000104.png",
+    "clip_id": "b2343a51da02a3e3",
+    "animation": "jump",
+    "frame_idx": 1,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000105",
+    "sprite": "sprites/000105.png",
+    "pose": "poses/000105.png",
+    "clip_id": "3bc4680b11b514f7",
+    "animation": "walk",
+    "frame_idx": 5,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000106",
+    "sprite": "sprites/000106.png",
+    "pose": "poses/000106.png",
+    "clip_id": "afde235839945cf7",
+    "animation": "jump",
+    "frame_idx": 2,
+    "total_frames": 6,
+    "augmented": true
+  },
+  {
+    "id": "000107",
+    "sprite": "sprites/000107.png",
+    "pose": "poses/000107.png",
+    "clip_id": "29dc953257ccc284",
+    "animation": "attack",
+    "frame_idx": 2,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000108",
+    "sprite": "sprites/000108.png",
+    "pose": "poses/000108.png",
+    "clip_id": "8b374e5b7dc2e263",
+    "animation": "death",
+    "frame_idx": 1,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000109",
+    "sprite": "sprites/000109.png",
+    "pose": "poses/000109.png",
+    "clip_id": "6b46beba46d86164",
+    "animation": "death",
+    "frame_idx": 0,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000110",
+    "sprite": "sprites/000110.png",
+    "pose": "poses/000110.png",
+    "clip_id": "0b5e940533bab086",
+    "animation": "idle",
+    "frame_idx": 5,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000111",
+    "sprite": "sprites/000111.png",
+    "pose": "poses/000111.png",
+    "clip_id": "ec2f24e8f14cb246",
+    "animation": "walk",
+    "frame_idx": 0,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000112",
+    "sprite": "sprites/000112.png",
+    "pose": "poses/000112.png",
+    "clip_id": "eb09b7b68eb712a6",
+    "animation": "walk",
+    "frame_idx": 5,
+    "total_frames": 6,
+    "augmented": true
+  },
+  {
+    "id": "000113",
+    "sprite": "sprites/000113.png",
+    "pose": "poses/000113.png",
+    "clip_id": "82c8110fe39f37d8",
+    "animation": "death",
+    "frame_idx": 0,
+    "total_frames": 22,
+    "augmented": true
+  },
+  {
+    "id": "000114",
+    "sprite": "sprites/000114.png",
+    "pose": "poses/000114.png",
+    "clip_id": "22e3870a06142bba",
+    "animation": "idle",
+    "frame_idx": 0,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000115",
+    "sprite": "sprites/000115.png",
+    "pose": "poses/000115.png",
+    "clip_id": "f52ab69962abe9ff",
+    "animation": "attack",
+    "frame_idx": 2,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000116",
+    "sprite": "sprites/000116.png",
+    "pose": "poses/000116.png",
+    "clip_id": "1ca576f157d272c2",
+    "animation": "walk",
+    "frame_idx": 3,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000117",
+    "sprite": "sprites/000117.png",
+    "pose": "poses/000117.png",
+    "clip_id": "41ae3b9f1c506b72",
+    "animation": "idle",
+    "frame_idx": 3,
+    "total_frames": 6,
+    "augmented": true
+  },
+  {
+    "id": "000118",
+    "sprite": "sprites/000118.png",
+    "pose": "poses/000118.png",
+    "clip_id": "642c2554079c0ec9",
+    "animation": "death",
+    "frame_idx": 4,
+    "total_frames": 22,
+    "augmented": false
+  },
+  {
+    "id": "000119",
+    "sprite": "sprites/000119.png",
+    "pose": "poses/000119.png",
+    "clip_id": "f9772b0340f9b86c",
+    "animation": "idle",
+    "frame_idx": 2,
+    "total_frames": 6,
+    "augmented": true
+  },
+  {
+    "id": "000120",
+    "sprite": "sprites/000120.png",
+    "pose": "poses/000120.png",
+    "clip_id": "56601ab01c185124",
+    "animation": "idle",
+    "frame_idx": 3,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000121",
+    "sprite": "sprites/000121.png",
+    "pose": "poses/000121.png",
+    "clip_id": "43e12e97b3dcdaa6",
+    "animation": "idle",
+    "frame_idx": 3,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000122",
+    "sprite": "sprites/000122.png",
+    "pose": "poses/000122.png",
+    "clip_id": "ce3ac879e3bf669c",
+    "animation": "idle",
+    "frame_idx": 0,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000123",
+    "sprite": "sprites/000123.png",
+    "pose": "poses/000123.png",
+    "clip_id": "a1b50659ad54ab46",
+    "animation": "death",
+    "frame_idx": 0,
+    "total_frames": 10,
+    "augmented": false
+  },
+  {
+    "id": "000124",
+    "sprite": "sprites/000124.png",
+    "pose": "poses/000124.png",
+    "clip_id": "7139894dcba5e45e",
+    "animation": "attack",
+    "frame_idx": 5,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000125",
+    "sprite": "sprites/000125.png",
+    "pose": "poses/000125.png",
+    "clip_id": "36a78b76fca3fe6e",
+    "animation": "idle",
+    "frame_idx": 0,
+    "total_frames": 1,
+    "augmented": false
+  },
+  {
+    "id": "000126",
+    "sprite": "sprites/000126.png",
+    "pose": "poses/000126.png",
+    "clip_id": "ce3ac879e3bf669c",
+    "animation": "idle",
+    "frame_idx": 4,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000127",
+    "sprite": "sprites/000127.png",
+    "pose": "poses/000127.png",
+    "clip_id": "59d0a160326be07c",
+    "animation": "attack",
+    "frame_idx": 1,
+    "total_frames": 6,
+    "augmented": true
+  },
+  {
+    "id": "000128",
+    "sprite": "sprites/000128.png",
+    "pose": "poses/000128.png",
+    "clip_id": "6aa354d3cffedc45",
+    "animation": "walk",
+    "frame_idx": 1,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000129",
+    "sprite": "sprites/000129.png",
+    "pose": "poses/000129.png",
+    "clip_id": "237d538952834467",
+    "animation": "attack",
+    "frame_idx": 4,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000130",
+    "sprite": "sprites/000130.png",
+    "pose": "poses/000130.png",
+    "clip_id": "cdd33783b3086e55",
+    "animation": "death",
+    "frame_idx": 26,
+    "total_frames": 28,
+    "augmented": false
+  },
+  {
+    "id": "000131",
+    "sprite": "sprites/000131.png",
+    "pose": "poses/000131.png",
+    "clip_id": "34f24e602e12b536",
+    "animation": "walk",
+    "frame_idx": 2,
+    "total_frames": 7,
+    "augmented": false
+  },
+  {
+    "id": "000132",
+    "sprite": "sprites/000132.png",
+    "pose": "poses/000132.png",
+    "clip_id": "628e9de4c265df67",
+    "animation": "walk",
+    "frame_idx": 5,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000133",
+    "sprite": "sprites/000133.png",
+    "pose": "poses/000133.png",
+    "clip_id": "6b5ad45d9317c224",
+    "animation": "idle",
+    "frame_idx": 1,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000134",
+    "sprite": "sprites/000134.png",
+    "pose": "poses/000134.png",
+    "clip_id": "09963df503e0a17a",
+    "animation": "attack",
+    "frame_idx": 3,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000135",
+    "sprite": "sprites/000135.png",
+    "pose": "poses/000135.png",
+    "clip_id": "2a40759f26b61a8d",
+    "animation": "death",
+    "frame_idx": 2,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000136",
+    "sprite": "sprites/000136.png",
+    "pose": "poses/000136.png",
+    "clip_id": "bd290445975f7ac9",
+    "animation": "idle",
+    "frame_idx": 1,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000137",
+    "sprite": "sprites/000137.png",
+    "pose": "poses/000137.png",
+    "clip_id": "75c752ab391cc468",
+    "animation": "idle",
+    "frame_idx": 34,
+    "total_frames": 42,
+    "augmented": false
+  },
+  {
+    "id": "000138",
+    "sprite": "sprites/000138.png",
+    "pose": "poses/000138.png",
+    "clip_id": "f66cae7781404e66",
+    "animation": "walk",
+    "frame_idx": 0,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000139",
+    "sprite": "sprites/000139.png",
+    "pose": "poses/000139.png",
+    "clip_id": "49ae6a532ab9651d",
+    "animation": "idle",
+    "frame_idx": 1,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000140",
+    "sprite": "sprites/000140.png",
+    "pose": "poses/000140.png",
+    "clip_id": "e284d236456ad440",
+    "animation": "walk",
+    "frame_idx": 1,
+    "total_frames": 6,
+    "augmented": true
+  },
+  {
+    "id": "000141",
+    "sprite": "sprites/000141.png",
+    "pose": "poses/000141.png",
+    "clip_id": "1a19ccdc4e3d8c36",
+    "animation": "jump",
+    "frame_idx": 2,
+    "total_frames": 34,
+    "augmented": true
+  },
+  {
+    "id": "000142",
+    "sprite": "sprites/000142.png",
+    "pose": "poses/000142.png",
+    "clip_id": "7032784803de534c",
+    "animation": "idle",
+    "frame_idx": 0,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000143",
+    "sprite": "sprites/000143.png",
+    "pose": "poses/000143.png",
+    "clip_id": "24cfa4555b6a17ff",
+    "animation": "attack",
+    "frame_idx": 5,
+    "total_frames": 6,
+    "augmented": true
+  },
+  {
+    "id": "000144",
+    "sprite": "sprites/000144.png",
+    "pose": "poses/000144.png",
+    "clip_id": "b9fdeb82511ecd8e",
+    "animation": "idle",
+    "frame_idx": 33,
+    "total_frames": 42,
+    "augmented": true
+  },
+  {
+    "id": "000145",
+    "sprite": "sprites/000145.png",
+    "pose": "poses/000145.png",
+    "clip_id": "8591ff0c41bc7dc8",
+    "animation": "death",
+    "frame_idx": 4,
+    "total_frames": 6,
+    "augmented": true
+  },
+  {
+    "id": "000146",
+    "sprite": "sprites/000146.png",
+    "pose": "poses/000146.png",
+    "clip_id": "e58a2ad12824a850",
+    "animation": "idle",
+    "frame_idx": 0,
+    "total_frames": 8,
+    "augmented": true
+  },
+  {
+    "id": "000147",
+    "sprite": "sprites/000147.png",
+    "pose": "poses/000147.png",
+    "clip_id": "642c2554079c0ec9",
+    "animation": "death",
+    "frame_idx": 9,
+    "total_frames": 22,
+    "augmented": false
+  },
+  {
+    "id": "000148",
+    "sprite": "sprites/000148.png",
+    "pose": "poses/000148.png",
+    "clip_id": "59d0a160326be07c",
+    "animation": "attack",
+    "frame_idx": 0,
+    "total_frames": 6,
+    "augmented": true
+  },
+  {
+    "id": "000149",
+    "sprite": "sprites/000149.png",
+    "pose": "poses/000149.png",
+    "clip_id": "75b5c1c267e4986a",
+    "animation": "idle",
+    "frame_idx": 0,
+    "total_frames": 6,
+    "augmented": true
+  },
+  {
+    "id": "000150",
+    "sprite": "sprites/000150.png",
+    "pose": "poses/000150.png",
+    "clip_id": "94aecb2ba06bdbcf",
+    "animation": "run",
+    "frame_idx": 7,
+    "total_frames": 8,
+    "augmented": true
+  },
+  {
+    "id": "000151",
+    "sprite": "sprites/000151.png",
+    "pose": "poses/000151.png",
+    "clip_id": "7032784803de534c",
+    "animation": "idle",
+    "frame_idx": 2,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000152",
+    "sprite": "sprites/000152.png",
+    "pose": "poses/000152.png",
+    "clip_id": "e5cf5bb0dd436ae1",
+    "animation": "idle",
+    "frame_idx": 17,
+    "total_frames": 18,
+    "augmented": false
+  },
+  {
+    "id": "000153",
+    "sprite": "sprites/000153.png",
+    "pose": "poses/000153.png",
+    "clip_id": "94aecb2ba06bdbcf",
+    "animation": "run",
+    "frame_idx": 1,
+    "total_frames": 8,
+    "augmented": true
+  },
+  {
+    "id": "000154",
+    "sprite": "sprites/000154.png",
+    "pose": "poses/000154.png",
+    "clip_id": "4550f5ac24a29398",
+    "animation": "idle",
+    "frame_idx": 1,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000155",
+    "sprite": "sprites/000155.png",
+    "pose": "poses/000155.png",
+    "clip_id": "ff910472d45247e5",
+    "animation": "attack",
+    "frame_idx": 3,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000156",
+    "sprite": "sprites/000156.png",
+    "pose": "poses/000156.png",
+    "clip_id": "8d3f1ffcc833bb8f",
+    "animation": "idle",
+    "frame_idx": 2,
+    "total_frames": 3,
+    "augmented": true
+  },
+  {
+    "id": "000157",
+    "sprite": "sprites/000157.png",
+    "pose": "poses/000157.png",
+    "clip_id": "4516e153657c574a",
+    "animation": "death",
+    "frame_idx": 19,
+    "total_frames": 28,
+    "augmented": true
+  },
+  {
+    "id": "000158",
+    "sprite": "sprites/000158.png",
+    "pose": "poses/000158.png",
+    "clip_id": "0a4908b156bd5cb6",
+    "animation": "jump",
+    "frame_idx": 31,
+    "total_frames": 34,
+    "augmented": false
+  },
+  {
+    "id": "000159",
+    "sprite": "sprites/000159.png",
+    "pose": "poses/000159.png",
+    "clip_id": "b2dd7c4462e4cd41",
+    "animation": "death",
+    "frame_idx": 5,
+    "total_frames": 6,
+    "augmented": true
+  },
+  {
+    "id": "000160",
+    "sprite": "sprites/000160.png",
+    "pose": "poses/000160.png",
+    "clip_id": "7139894dcba5e45e",
+    "animation": "attack",
+    "frame_idx": 4,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000161",
+    "sprite": "sprites/000161.png",
+    "pose": "poses/000161.png",
+    "clip_id": "a3ca924a094477c6",
+    "animation": "idle",
+    "frame_idx": 5,
+    "total_frames": 12,
+    "augmented": false
+  },
+  {
+    "id": "000162",
+    "sprite": "sprites/000162.png",
+    "pose": "poses/000162.png",
+    "clip_id": "b1a27407d3b90376",
+    "animation": "attack",
+    "frame_idx": 0,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000163",
+    "sprite": "sprites/000163.png",
+    "pose": "poses/000163.png",
+    "clip_id": "642c2554079c0ec9",
+    "animation": "death",
+    "frame_idx": 8,
+    "total_frames": 22,
+    "augmented": false
+  },
+  {
+    "id": "000164",
+    "sprite": "sprites/000164.png",
+    "pose": "poses/000164.png",
+    "clip_id": "30c480df5b607fb6",
+    "animation": "attack",
+    "frame_idx": 35,
+    "total_frames": 50,
+    "augmented": false
+  },
+  {
+    "id": "000165",
+    "sprite": "sprites/000165.png",
+    "pose": "poses/000165.png",
+    "clip_id": "0672c1e494bafb16",
+    "animation": "attack",
+    "frame_idx": 9,
+    "total_frames": 10,
+    "augmented": false
+  },
+  {
+    "id": "000166",
+    "sprite": "sprites/000166.png",
+    "pose": "poses/000166.png",
+    "clip_id": "3bc4680b11b514f7",
+    "animation": "walk",
+    "frame_idx": 4,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000167",
+    "sprite": "sprites/000167.png",
+    "pose": "poses/000167.png",
+    "clip_id": "6b5ad45d9317c224",
+    "animation": "idle",
+    "frame_idx": 0,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000168",
+    "sprite": "sprites/000168.png",
+    "pose": "poses/000168.png",
+    "clip_id": "7304be59a6612e02",
+    "animation": "idle",
+    "frame_idx": 2,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000169",
+    "sprite": "sprites/000169.png",
+    "pose": "poses/000169.png",
+    "clip_id": "1a19ccdc4e3d8c36",
+    "animation": "jump",
+    "frame_idx": 1,
+    "total_frames": 34,
+    "augmented": true
+  },
+  {
+    "id": "000170",
+    "sprite": "sprites/000170.png",
+    "pose": "poses/000170.png",
+    "clip_id": "e3d0abe10d1ece15",
+    "animation": "idle",
+    "frame_idx": 15,
+    "total_frames": 18,
+    "augmented": true
+  },
+  {
+    "id": "000171",
+    "sprite": "sprites/000171.png",
+    "pose": "poses/000171.png",
+    "clip_id": "b9fdeb82511ecd8e",
+    "animation": "idle",
+    "frame_idx": 37,
+    "total_frames": 42,
+    "augmented": true
+  },
+  {
+    "id": "000172",
+    "sprite": "sprites/000172.png",
+    "pose": "poses/000172.png",
+    "clip_id": "f84a2c015374066c",
+    "animation": "death",
+    "frame_idx": 2,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000173",
+    "sprite": "sprites/000173.png",
+    "pose": "poses/000173.png",
+    "clip_id": "4a81b32bc8e54823",
+    "animation": "idle",
+    "frame_idx": 5,
+    "total_frames": 6,
+    "augmented": true
+  },
+  {
+    "id": "000174",
+    "sprite": "sprites/000174.png",
+    "pose": "poses/000174.png",
+    "clip_id": "82eb1f05cf430ea4",
+    "animation": "walk",
+    "frame_idx": 4,
+    "total_frames": 8,
+    "augmented": false
+  },
+  {
+    "id": "000175",
+    "sprite": "sprites/000175.png",
+    "pose": "poses/000175.png",
+    "clip_id": "46e52976e1fb002e",
+    "animation": "attack",
+    "frame_idx": 0,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000176",
+    "sprite": "sprites/000176.png",
+    "pose": "poses/000176.png",
+    "clip_id": "be42930e87af3d36",
+    "animation": "attack",
+    "frame_idx": 8,
+    "total_frames": 50,
+    "augmented": true
+  },
+  {
+    "id": "000177",
+    "sprite": "sprites/000177.png",
+    "pose": "poses/000177.png",
+    "clip_id": "09b7aca719e206ef",
+    "animation": "idle",
+    "frame_idx": 2,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000178",
+    "sprite": "sprites/000178.png",
+    "pose": "poses/000178.png",
+    "clip_id": "d5b4dc200044a0aa",
+    "animation": "walk",
+    "frame_idx": 2,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000179",
+    "sprite": "sprites/000179.png",
+    "pose": "poses/000179.png",
+    "clip_id": "ccba791498ad4c08",
+    "animation": "death",
+    "frame_idx": 2,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000180",
+    "sprite": "sprites/000180.png",
+    "pose": "poses/000180.png",
+    "clip_id": "1a19ccdc4e3d8c36",
+    "animation": "jump",
+    "frame_idx": 23,
+    "total_frames": 34,
+    "augmented": true
+  },
+  {
+    "id": "000181",
+    "sprite": "sprites/000181.png",
+    "pose": "poses/000181.png",
+    "clip_id": "7e30d0a8b65acfb3",
+    "animation": "idle",
+    "frame_idx": 0,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000182",
+    "sprite": "sprites/000182.png",
+    "pose": "poses/000182.png",
+    "clip_id": "9beb437736691844",
+    "animation": "walk",
+    "frame_idx": 3,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000183",
+    "sprite": "sprites/000183.png",
+    "pose": "poses/000183.png",
+    "clip_id": "768e51b6528f66ff",
+    "animation": "walk",
+    "frame_idx": 2,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000184",
+    "sprite": "sprites/000184.png",
+    "pose": "poses/000184.png",
+    "clip_id": "82c8110fe39f37d8",
+    "animation": "death",
+    "frame_idx": 16,
+    "total_frames": 22,
+    "augmented": true
+  },
+  {
+    "id": "000185",
+    "sprite": "sprites/000185.png",
+    "pose": "poses/000185.png",
+    "clip_id": "4516e153657c574a",
+    "animation": "death",
+    "frame_idx": 23,
+    "total_frames": 28,
+    "augmented": true
+  },
+  {
+    "id": "000186",
+    "sprite": "sprites/000186.png",
+    "pose": "poses/000186.png",
+    "clip_id": "e94d5096e04ed79f",
+    "animation": "idle",
+    "frame_idx": 1,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000187",
+    "sprite": "sprites/000187.png",
+    "pose": "poses/000187.png",
+    "clip_id": "45a73a7b5d360b43",
+    "animation": "idle",
+    "frame_idx": 0,
+    "total_frames": 1,
+    "augmented": true
+  },
+  {
+    "id": "000188",
+    "sprite": "sprites/000188.png",
+    "pose": "poses/000188.png",
+    "clip_id": "8c58508243a0195a",
+    "animation": "attack",
+    "frame_idx": 1,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000189",
+    "sprite": "sprites/000189.png",
+    "pose": "poses/000189.png",
+    "clip_id": "796c18e81829e2f1",
+    "animation": "idle",
+    "frame_idx": 4,
+    "total_frames": 6,
+    "augmented": true
+  },
+  {
+    "id": "000190",
+    "sprite": "sprites/000190.png",
+    "pose": "poses/000190.png",
+    "clip_id": "50b36854936af655",
+    "animation": "attack",
+    "frame_idx": 2,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000191",
+    "sprite": "sprites/000191.png",
+    "pose": "poses/000191.png",
+    "clip_id": "30c480df5b607fb6",
+    "animation": "attack",
+    "frame_idx": 0,
+    "total_frames": 50,
+    "augmented": false
+  },
+  {
+    "id": "000192",
+    "sprite": "sprites/000192.png",
+    "pose": "poses/000192.png",
+    "clip_id": "30c480df5b607fb6",
+    "animation": "attack",
+    "frame_idx": 45,
+    "total_frames": 50,
+    "augmented": false
+  },
+  {
+    "id": "000193",
+    "sprite": "sprites/000193.png",
+    "pose": "poses/000193.png",
+    "clip_id": "30b24481028fcebb",
+    "animation": "idle",
+    "frame_idx": 1,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000194",
+    "sprite": "sprites/000194.png",
+    "pose": "poses/000194.png",
+    "clip_id": "82039799f657a313",
+    "animation": "idle",
+    "frame_idx": 1,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000195",
+    "sprite": "sprites/000195.png",
+    "pose": "poses/000195.png",
+    "clip_id": "b58ca8f8b598d513",
+    "animation": "death",
+    "frame_idx": 1,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000196",
+    "sprite": "sprites/000196.png",
+    "pose": "poses/000196.png",
+    "clip_id": "25c6456d6504c457",
+    "animation": "death",
+    "frame_idx": 1,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000197",
+    "sprite": "sprites/000197.png",
+    "pose": "poses/000197.png",
+    "clip_id": "68c20f327fe32297",
+    "animation": "attack",
+    "frame_idx": 2,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000198",
+    "sprite": "sprites/000198.png",
+    "pose": "poses/000198.png",
+    "clip_id": "9edddb8544fa21a4",
+    "animation": "idle",
+    "frame_idx": 1,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000199",
+    "sprite": "sprites/000199.png",
+    "pose": "poses/000199.png",
+    "clip_id": "eff27651aaee3e94",
+    "animation": "attack",
+    "frame_idx": 1,
+    "total_frames": 16,
+    "augmented": true
+  },
+  {
+    "id": "000200",
+    "sprite": "sprites/000200.png",
+    "pose": "poses/000200.png",
+    "clip_id": "4863b3448ea1bd86",
+    "animation": "death",
+    "frame_idx": 1,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000201",
+    "sprite": "sprites/000201.png",
+    "pose": "poses/000201.png",
+    "clip_id": "7032784803de534c",
+    "animation": "idle",
+    "frame_idx": 3,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000202",
+    "sprite": "sprites/000202.png",
+    "pose": "poses/000202.png",
+    "clip_id": "4517d225b50235b8",
+    "animation": "walk",
+    "frame_idx": 0,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000203",
+    "sprite": "sprites/000203.png",
+    "pose": "poses/000203.png",
+    "clip_id": "183e9d73cbdc03f0",
+    "animation": "idle",
+    "frame_idx": 3,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000204",
+    "sprite": "sprites/000204.png",
+    "pose": "poses/000204.png",
+    "clip_id": "d5b4dc200044a0aa",
+    "animation": "walk",
+    "frame_idx": 3,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000205",
+    "sprite": "sprites/000205.png",
+    "pose": "poses/000205.png",
+    "clip_id": "cc5228530126541c",
+    "animation": "jump",
+    "frame_idx": 3,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000206",
+    "sprite": "sprites/000206.png",
+    "pose": "poses/000206.png",
+    "clip_id": "d1b551fd99063acb",
+    "animation": "walk",
+    "frame_idx": 3,
+    "total_frames": 4,
+    "augmented": false
+  },
+  {
+    "id": "000207",
+    "sprite": "sprites/000207.png",
+    "pose": "poses/000207.png",
+    "clip_id": "f97cc1193ad3bb81",
+    "animation": "death",
+    "frame_idx": 12,
+    "total_frames": 18,
+    "augmented": true
+  },
+  {
+    "id": "000208",
+    "sprite": "sprites/000208.png",
+    "pose": "poses/000208.png",
+    "clip_id": "a0ed7799b682415e",
+    "animation": "idle",
+    "frame_idx": 1,
+    "total_frames": 4,
+    "augmented": true
+  },
+  {
+    "id": "000209",
+    "sprite": "sprites/000209.png",
+    "pose": "poses/000209.png",
+    "clip_id": "b9fdeb82511ecd8e",
+    "animation": "idle",
+    "frame_idx": 12,
+    "total_frames": 42,
+    "augmented": true
+  },
+  {
+    "id": "000210",
+    "sprite": "sprites/000210.png",
+    "pose": "poses/000210.png",
+    "clip_id": "a8ee183ed5efd133",
+    "animation": "idle",
+    "frame_idx": 0,
+    "total_frames": 1,
+    "augmented": true
+  },
+  {
+    "id": "000211",
+    "sprite": "sprites/000211.png",
+    "pose": "poses/000211.png",
+    "clip_id": "fd65023412a64b3c",
+    "animation": "attack",
+    "frame_idx": 3,
+    "total_frames": 6,
+    "augmented": true
+  },
+  {
+    "id": "000212",
+    "sprite": "sprites/000212.png",
+    "pose": "poses/000212.png",
+    "clip_id": "a49f78d214abe183",
+    "animation": "attack",
+    "frame_idx": 3,
+    "total_frames": 6,
+    "augmented": false
+  },
+  {
+    "id": "000213",
+    "sprite": "sprites/000213.png",
+    "pose": "poses/000213.png",
+    "clip_id": "41b8606f4c8b13d2",
+    "animation": "attack",
+    "frame_idx": 3,
+    "total_frames": 4,
+    "augmented": true
+  }
+]

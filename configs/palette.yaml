@@ -1,0 +1,35 @@
+palette:
+  # Nero e ombre
+  - [10, 8, 12]
+  - [22, 18, 28]
+  - [35, 28, 42]
+  - [48, 38, 55]
+  # Grigi armor
+  - [65, 58, 72]
+  - [88, 80, 95]
+  - [115, 105, 120]
+  - [148, 138, 152]
+  # Mantello scuro (bordeaux)
+  - [55, 15, 20]
+  - [80, 22, 30]
+  - [110, 35, 42]
+  # Metallo (elmo/maschera)
+  - [70, 75, 85]
+  - [100, 108, 118]
+  - [140, 148, 160]
+  # Oro (croci fucile)
+  - [120, 95, 30]
+  - [165, 138, 55]
+  - [200, 175, 85]
+  # Spiriti cianotici (lanterna)
+  - [0, 180, 200]
+  - [30, 220, 240]
+  - [100, 245, 255]
+  - [180, 255, 255]
+  # Pelle (maschera sotto cappuccio)
+  - [180, 140, 105]
+  - [140, 105, 78]
+  # Bianco sporco (highlight estremi)
+  - [235, 228, 215]
+
+max_colors: 24

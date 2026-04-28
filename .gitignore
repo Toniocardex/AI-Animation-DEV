@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+.env
+*.egg-info/
+dist/
+build/
+
+# Training / inference artifacts
+checkpoints/
+outputs/
+runs/
+*.pth
+
+# Licensed pack: binary sprites (rebuild dataset locally; manifest may stay)
+data/raw/licensed/**/*.png
+data/raw/licensed/**/*.gif
+data/raw/licensed/**/*.psd
+
+# Built dataset frame files (annotations.json kept for layout / small projects)
+data/final/**/sprites/
+data/final/**/poses/
+
+# Tools / editor
+.cursor/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
